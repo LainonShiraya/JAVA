@@ -42,7 +42,7 @@ try {
 	        DatagramSocket socket = new DatagramSocket();
 	        InetAddress address = InetAddress.getLocalHost();
 	        int port=ports[y];
-	        System.out.println("Połączenie: "+address);	        
+	        System.out.println("Connection: "+address);	        
 	        byte[] sendingDataBuffer = "20375".getBytes();
 	        byte[] receivingDataBuffer = new byte[1024];
 	        String message = "192.168.56.1:"+port;
@@ -63,7 +63,7 @@ try {
 	        	PrintWriter out = new PrintWriter(TCP.getOutputStream(),true);
 	    		BufferedReader in = new BufferedReader(new InputStreamReader(TCP.getInputStream()));
 	    		
-	    		out.println("Wiadomosc od Clienta z portu: "+reply);
+	    		out.println("Message from client on port:: "+reply);
 	    		
 	    		out.flush();
 	    		out.println();
@@ -72,7 +72,7 @@ try {
 	    		String line;
 	    		
 	    		while((line = in.readLine()) != null && !line.isEmpty()) {
-	    			System.out.println("Wiadomosc od servera: "+line);
+	    			System.out.println("Message from server: "+line);
 	    		}
 
 	       // socket.close();

@@ -22,7 +22,6 @@ public class Server {
         
 		for (int i=0; i< ports.length; i++) {
 				
-				System.out.println("dziala");
 				ServerClass serverClass = new ServerClass(ports[i]);
 				Thread serverClassThread = new Thread(serverClass);
 				serverClassThread.run();

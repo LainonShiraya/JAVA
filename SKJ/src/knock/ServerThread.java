@@ -23,9 +23,9 @@ public class ServerThread extends Thread {
 			String line1 = in.readLine();
 			String line2 = in.readLine();
 
-            System.out.println("Wczytalem: "+ line1 + line2);
+            System.out.println("I loaded:  "+ line1 + line2);
 
-            out.println("Server wyslal wiadomosc!");
+            out.println("Server has sent the message!");
 
 		}catch( IOException el) {
 			System.out.println(el);

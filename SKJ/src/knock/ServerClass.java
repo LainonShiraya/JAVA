@@ -38,7 +38,6 @@ public class ServerClass implements Runnable {
 	             {
 	                DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
 	                serverSocket.receive(receivePacket);
-	                System.out.println("koniec po receive");
 	             //   String mess = new String(receiveData,0,receiveData.length);
 	              //  System.out.println(mess);
 	            //   String sentence = new String( receivePacket.getData());
@@ -53,7 +52,6 @@ public class ServerClass implements Runnable {
 	                serverSocket.send(sendPacket);
 	            //   client = TCP.accept();
 	           //  (new ServerThread(client)).start();
-	                System.out.println("koniec while'a");
 	                }
 	    }
 			
